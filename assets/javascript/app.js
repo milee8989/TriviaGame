@@ -7,7 +7,7 @@ var interval = '';
 var a = 0;
 var questions = [
     { 
-        q: "what is not a primary colors?", 
+        q: "What is not a primary colors?", 
         a: ["blue", "green", "red", "black"], 
         correctAnswer: "black" 
     },
