@@ -28,9 +28,11 @@ var questions = [
     }
 ];
 
+
+
 function printQuestions(a){
     quiz.empty();
-
+    $("#start").remove();
     if (a < questions.length){
 
         var questionName = $("<h3>");
@@ -59,6 +61,7 @@ function printQuestions(a){
 
 
 $(document).on('click', '.btn', function(){
+    
 //inside of THIS button there is an attr of data-userAnswer
    var userAnswer = $(this).attr('data-userAnswer');
    var correctAnswer = $(this).attr('data-correctAnswer');
@@ -74,6 +77,7 @@ $(document).on('click', '.btn', function(){
 
 
 interval = setInterval(function(){
+   
     counter--;
     $("#timer").text(counter)
     console.log(counter)
@@ -91,7 +95,7 @@ function stopInterval(){
 
 
 
-printQuestions(a)
+// printQuestions(a)
 
 
 
