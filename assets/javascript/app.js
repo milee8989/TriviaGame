@@ -7,19 +7,24 @@ var interval = '';
 var a = 0;
 var questions = [
     { 
-        q: "color of banana?", 
-        a: ["blue", "yellow", "red", "olive"], 
-        correctAnswer: "yellow" 
+        q: "what is not a primary colors?", 
+        a: ["blue", "green", "red", "black"], 
+        correctAnswer: "black" 
     },
     { 
-        q: "color of grape?", 
+        q: "What is the main color of the UN flag?", 
         a: ["blue", "light-green", "red", "black"], 
-        correctAnswer: "yellow" 
+        correctAnswer: "light-green" 
     },
     { 
-        q: "color of melon?", 
-        a: ["blue", "yellow", "green", "blue-navy"], 
-        correctAnswer: "yellow" 
+        q: "An Oscar is what color?", 
+        a: ["iron", "copper", "silver", "gold"], 
+        correctAnswer: "gold" 
+    },
+    { 
+        q: "The stars on the flag of the United States are what color?", 
+        a: ["blue", "white", "red", "black"], 
+        correctAnswer: "white" 
     }
 ];
 
@@ -43,10 +48,10 @@ function printQuestions(a){
         }
     }else{
         stopInterval();
-        var wins = $('<h1>');
-        wins.text('Correct' + correct)
+        var wins = $('<h2>');
+        wins.text('Correct' +correct)
         console.log("wins " + correct);
-        var losses = $('<h1>');
+        var losses = $('<h2>');
        losses.text("Incorrect " + incorrect)
         quiz.append(wins, losses);
     }
